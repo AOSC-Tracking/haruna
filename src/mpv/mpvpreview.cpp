@@ -11,7 +11,9 @@
 
 MpvPreview::MpvPreview()
 {
-    mpv_observe_property(m_mpv, 0, "time-pos", MPV_FORMAT_DOUBLE);
+    Q_EMIT setProperty(MpvProperties::self()->VO, QStringLiteral("libmpv"));
+    Q_EMIT observeProperty(MpvProperties::self()->Position, MPV_FORMAT_DOUBLE);
+    Q_EMIT observeProperty(MpvProperties::self()->AspectRatio, MPV_FORMAT_DOUBLE);
 
     setProperty(MpvProperties::self()->Mute, true);
     setProperty(MpvProperties::self()->Pause, true);
