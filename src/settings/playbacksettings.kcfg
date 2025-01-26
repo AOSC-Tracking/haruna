@@ -25,7 +25,7 @@
     </entry>
     <entry name="YtdlFormat" type="String"></entry>
     <entry name="UseHWDecoding" type="bool">
-      <default>false</default>
+      <default>true</default>
     </entry>
     <entry name="HWDecoding" type="String">
       <default>auto</default>

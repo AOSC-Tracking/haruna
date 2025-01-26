@@ -118,7 +118,7 @@ void MpvItem::initProperties()
 
     Q_EMIT setProperty(MpvProperties::self()->VO, QStringLiteral("libmpv"));
 
-    QString hwdec = PlaybackSettings::useHWDecoding() ? PlaybackSettings::hWDecoding() : QStringLiteral("no");
+    QString hwdec = PlaybackSettings::useHWDecoding() ? PlaybackSettings::hWDecoding() : QStringLiteral("yes");
     setProperty(MpvProperties::self()->HardwareDecoding, hwdec);
     setProperty(MpvProperties::self()->VolumeMax, QStringLiteral("100"));
 
